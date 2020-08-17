@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Staatliches&display=swap");
+/* font-family: "Lobster", cursive; */
+/* color: #f9cf1d; */
+/*  */
+
+.header {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  background-color: #1b2023;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* position: sticky; */
+  /* top: 0; */
+  z-index: 999;
+  text-align: center;
+}
+
+.header__title h1 {
+  display: flex;
+  font-family: "Staatliches", cursive;
+  color: #f9cf1d;
+  font-size: 4rem;
+  padding-bottom: 20px;
+  position: relative;
+  animation: title;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  cursor: pointer;
+  transition: 0.4s;
+  letter-spacing: 17px;
+  text-transform: uppercase;
+}
+
+.header__title h1:hover {
+  color: violet;
+}
+
+@keyframes title {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.header_options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__signin {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.header__signin:hover {
+  color: red;
+}
+.header__signin .header__signInHello {
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
+.header__signin .header__signInUser {
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__cart {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  position: sticky;
+  margin-bottom: 50px;
+}
+.header__cart .header__cartIcon {
+  color: white;
+  font-size: 3rem;
+  margin-right: 10px;
+  transition: 0.2s ease-in;
+}
+
+.header__cart .header__cartIcon:hover {
+  transform: scale(1.2);
+  color: rgb(251, 151, 63);
+}
+
+.header__cart .header__cartCount {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
